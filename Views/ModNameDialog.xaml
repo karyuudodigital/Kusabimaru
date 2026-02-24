@@ -1,0 +1,34 @@
+<Window x:Class="SekiroModManager.Views.ModNameDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mod Name" Height="232" Width="624"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="Black"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Label Grid.Row="0" x:Name="ModNameLabel" Content="Please enter the name of the mod" 
+               Foreground="White" FontSize="26" FontFamily="Assassin$" 
+               HorizontalAlignment="Center" Margin="0,10,0,0"/>
+        
+        <TextBox Grid.Row="1" x:Name="ModNameTextBox" 
+                 Foreground="White" Background="Black" FontSize="26" FontFamily="Assassin$"
+                 Margin="26,20,26,0" Height="51"/>
+        
+        <CheckBox Grid.Row="2" x:Name="IsModPackCheckBox" Content="Modpack" 
+                  Foreground="White" Margin="30,10,0,0" 
+                  Checked="IsModPackCheckBox_Checked" Unchecked="IsModPackCheckBox_Unchecked"/>
+        
+        <Button Grid.Row="3" x:Name="ConfirmButton" Content="OK" 
+                Width="151" Height="101" Margin="0,0,0,20"
+                HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                Click="ConfirmButton_Click"/>
+    </Grid>
+</Window>
